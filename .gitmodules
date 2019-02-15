@@ -1,0 +1,3 @@
+[submodule "dtgo"]
+	path = dtgo
+	url = https://github.com/dogntao/dtgo.git
