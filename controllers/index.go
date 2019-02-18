@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"fmt"
+
 	"github.com/dogntao/rymz/routers"
 )
 
@@ -9,5 +11,9 @@ type IndexController struct {
 }
 
 func init() {
-	routers.Router.ConMap["index"] = &IndexController{}
+	routers.Router.ConMap["Index"] = &IndexController{}
+}
+
+func (ind *IndexController) Index() {
+	fmt.Println("index/index")
 }
