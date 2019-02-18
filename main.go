@@ -1,9 +1,13 @@
 package main
 
 import (
-	"github.com/dogntao/dtgo"
+	"net/http"
+
+	_ "github.com/dogntao/rymz/controllers"
+	"github.com/dogntao/rymz/routers"
 )
 
 func main() {
-	dtgo.Run()
+	http.HandleFunc("/", routers.Router.Router)
+	http.ListenAndServe("127.0.0.1:8088", nil)
 }
